@@ -1,0 +1,25 @@
+<footer class="footer">
+  <div class="footer-container">
+    <!-- Copyright / Brand -->
+    <div class="brand-box">
+      <span class="logo">&lt;{{ name }}/&gt;</span>
+      <p class="copyright">&copy; {{ currentYear }} {{ name }}. All rights reserved.</p>
+    </div>
+
+    <!-- Built info -->
+    <p class="built-info">
+      Built with <mat-icon class="heart-icon">favorite</mat-icon> using Angular 22 &amp; Angular
+      Material 3
+    </p>
+
+    <!-- Scroll to Top -->
+    <button
+      mat-icon-button
+      class="scroll-top-btn"
+      (click)="scrollToTop()"
+      aria-label="Scroll to top of page"
+    >
+      <mat-icon>keyboard_arrow_up</mat-icon>
+    </button>
+  </div>
+</footer>

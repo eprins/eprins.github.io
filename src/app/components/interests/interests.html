@@ -1,0 +1,16 @@
+<section id="interests" class="section">
+  <h2 class="section-title">Interests & Hobbies</h2>
+  <p class="section-subtitle">
+    What I enjoy doing when I am not writing code, building systems, or designing user interfaces.
+  </p>
+
+  <div class="interests-grid">
+    <div class="interest-card glass-card" *ngFor="let item of interests">
+      <div class="interest-icon-box">
+        <mat-icon class="interest-icon">{{ item.icon }}</mat-icon>
+      </div>
+      <h3 class="interest-title">{{ item.title }}</h3>
+      <p class="interest-description">{{ item.description }}</p>
+    </div>
+  </div>
+</section>

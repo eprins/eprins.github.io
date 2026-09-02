@@ -1,0 +1,120 @@
+.about-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 48px;
+  align-items: start;
+
+  @media (max-width: 960px) {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+}
+
+.subsection-title {
+  font-size: 1.6rem;
+  font-weight: 600;
+  margin-top: 0;
+  margin-bottom: 24px;
+  color: var(--mat-sys-on-surface);
+  position: relative;
+  display: inline-block;
+
+  &::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 40px;
+    height: 3px;
+    background-color: var(--mat-sys-primary);
+    border-radius: 2px;
+  }
+}
+
+.bio-container {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.bio-paragraph {
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: var(--mat-sys-on-surface-variant);
+  margin: 0;
+}
+
+.facts-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin-top: 24px;
+
+  @media (max-width: 480px) {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+}
+
+.fact-card {
+  padding: 16px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+
+  &:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.08);
+  }
+}
+
+.fact-number {
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: var(--mat-sys-primary);
+}
+
+.fact-label {
+  font-size: 0.8rem;
+  color: var(--mat-sys-on-surface-variant);
+  font-weight: 500;
+}
+
+/* Skills styling */
+.skills-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.skills-category {
+  background: rgba(var(--mat-sys-surface-container-low), 0.4);
+  border-radius: 12px;
+  padding: 12px 16px;
+  border: 1px solid rgba(128, 128, 128, 0.05);
+}
+
+.category-name {
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 0 0 8px;
+  color: var(--mat-sys-primary);
+  text-transform: uppercase;
+  letter-spacing: 0.05rem;
+}
+
+.skills-chip-set {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.skill-chip {
+  --mdc-chip-label-text-color: var(--mat-sys-on-surface-variant);
+  --mdc-chip-container-color: var(--mat-sys-surface-container-high);
+  font-size: 0.85rem;
+  font-weight: 500;
+  border: none;
+  border-radius: 8px;
+}

@@ -1,0 +1,67 @@
+<section id="projects" class="section">
+  <h2 class="section-title">Featured Projects</h2>
+  <p class="section-subtitle">
+    A showcase of some of my most impactful full-stack and frontend development work.
+  </p>
+
+  <!-- Category Filter Chips -->
+  <div class="filter-container">
+    <mat-chip-set aria-label="Filter projects by technology category">
+      <mat-chip
+        *ngFor="let cat of categories"
+        [class.selected-filter]="selectedCategory() === cat"
+        (click)="setCategory(cat)"
+        class="filter-chip"
+      >
+        {{ cat }}
+      </mat-chip>
+    </mat-chip-set>
+  </div>
+
+  <!-- Projects Grid -->
+  <div class="projects-grid">
+    <mat-card class="project-card glass-card" *ngFor="let proj of filteredProjects()">
+      <mat-card-header class="project-header">
+        <div class="project-icon-box">
+          <mat-icon class="project-icon">{{ proj.icon }}</mat-icon>
+        </div>
+        <div class="project-header-text">
+          <mat-card-title class="project-title">{{ proj.title }}</mat-card-title>
+          <span class="project-company" *ngIf="proj.company">{{ proj.company }}</span>
+        </div>
+      </mat-card-header>
+
+      <mat-card-content class="project-content">
+        <p class="project-description">{{ proj.description }}</p>
+
+        <div class="tech-stack-container">
+          <span class="tech-tag" *ngFor="let tech of proj.technologies"> {{ tech }} </span>
+        </div>
+      </mat-card-content>
+
+      <mat-card-actions class="project-actions" *ngIf="proj.githubUrl || proj.liveUrl">
+        <a
+          mat-stroked-button
+          [href]="proj.githubUrl"
+          target="_blank"
+          class="action-btn"
+          *ngIf="proj.githubUrl"
+        >
+          <mat-icon class="btn-icon">code</mat-icon>
+          <span>Code</span>
+        </a>
+        <a
+          mat-flat-button
+          color="primary"
+          [href]="proj.liveUrl"
+          target="_blank"
+          class="action-btn"
+          *ngIf="proj.liveUrl"
+        >
+          <mat-icon class="btn-icon">open_in_new</mat-icon>
+          <span>Live Demo</span>
+        </a>
+      </mat-card-actions>
+    </mat-card>
+  </div>
+</section>

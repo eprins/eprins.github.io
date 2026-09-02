@@ -1,0 +1,71 @@
+<mat-toolbar class="header-toolbar" [class.dark-header]="themeService.isDarkMode()">
+  <div class="header-container">
+    <!-- Logo / Name -->
+    <a href="#hero" class="logo">
+      <span class="logo-accent">&lt;</span>
+      {{ portfolioName }}
+      <span class="logo-accent">/&gt;</span>
+    </a>
+
+    <!-- Desktop Navigation -->
+    <nav class="desktop-nav">
+      <a mat-button href="#about" class="nav-link">About</a>
+      <a mat-button href="#experience" class="nav-link">Experience</a>
+      <a mat-button href="#education" class="nav-link">Education</a>
+      <a mat-button href="#projects" class="nav-link">Projects</a>
+      <a mat-button href="#interests" class="nav-link">Interests</a>
+      <a mat-button href="#contact" class="nav-link contact-btn">Contact</a>
+
+      <button
+        mat-icon-button
+        (click)="themeService.toggleTheme()"
+        aria-label="Toggle dark/light theme"
+      >
+        <mat-icon>{{ themeService.isDarkMode() ? 'light_mode' : 'dark_mode' }}</mat-icon>
+      </button>
+    </nav>
+
+    <!-- Mobile Navigation -->
+    <div class="mobile-nav">
+      <button
+        mat-icon-button
+        (click)="themeService.toggleTheme()"
+        aria-label="Toggle dark/light theme"
+        class="theme-toggle-mobile"
+      >
+        <mat-icon>{{ themeService.isDarkMode() ? 'light_mode' : 'dark_mode' }}</mat-icon>
+      </button>
+
+      <button mat-icon-button [matMenuTriggerFor]="mobileMenu" aria-label="Open navigation menu">
+        <mat-icon>menu</mat-icon>
+      </button>
+
+      <mat-menu #mobileMenu="matMenu" xPosition="before" class="mobile-dropdown-menu">
+        <a mat-menu-item href="#about">
+          <mat-icon>person</mat-icon>
+          <span>About</span>
+        </a>
+        <a mat-menu-item href="#experience">
+          <mat-icon>work</mat-icon>
+          <span>Experience</span>
+        </a>
+        <a mat-menu-item href="#education">
+          <mat-icon>school</mat-icon>
+          <span>Education</span>
+        </a>
+        <a mat-menu-item href="#projects">
+          <mat-icon>code</mat-icon>
+          <span>Projects</span>
+        </a>
+        <a mat-menu-item href="#interests">
+          <mat-icon>interests</mat-icon>
+          <span>Interests</span>
+        </a>
+        <a mat-menu-item href="#contact">
+          <mat-icon>email</mat-icon>
+          <span>Contact</span>
+        </a>
+      </mat-menu>
+    </div>
+  </div>
+</mat-toolbar>

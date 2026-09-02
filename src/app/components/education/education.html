@@ -1,0 +1,27 @@
+<section id="education" class="section">
+  <h2 class="section-title">Education</h2>
+  <p class="section-subtitle">Academic background that laid the foundation for my engineering career.</p>
+
+  <div class="education-grid">
+    <div class="education-card glass-card" *ngFor="let edu of education">
+      <div class="education-icon-box">
+        <img *ngIf="edu.logo" [src]="edu.logo" [alt]="edu.school + ' logo'" class="education-logo" />
+        <mat-icon *ngIf="!edu.logo" class="education-icon">school</mat-icon>
+      </div>
+      <div class="education-details">
+        <h3 class="education-degree">{{ edu.degree }}</h3>
+        <p class="education-school">{{ edu.school }}</p>
+        <div class="education-meta">
+          <span class="meta-item">
+            <mat-icon class="meta-icon">calendar_today</mat-icon>
+            {{ edu.duration }}
+          </span>
+          <span class="meta-item">
+            <mat-icon class="meta-icon">place</mat-icon>
+            {{ edu.location }}
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

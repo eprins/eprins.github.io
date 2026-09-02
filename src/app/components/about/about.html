@@ -1,0 +1,40 @@
+<section id="about" class="section">
+  <h2 class="section-title">About Me</h2>
+  <p class="section-subtitle">Get to know my story, my background, and my core technical skills.</p>
+
+  <div class="about-grid">
+    <!-- Biography -->
+    <div class="bio-container">
+      <h3 class="subsection-title">My Journey</h3>
+      <p class="bio-paragraph" *ngFor="let para of bioParagraphs">{{ para }}</p>
+      <div class="facts-grid">
+        <div class="fact-card glass-card">
+          <span class="fact-number">6+</span>
+          <span class="fact-label">Years of Experience</span>
+        </div>
+        <div class="fact-card glass-card">
+          <span class="fact-number">20+</span>
+          <span class="fact-label">Projects Completed</span>
+        </div>
+        <div class="fact-card glass-card">
+          <span class="fact-number">100%</span>
+          <span class="fact-label">Client Satisfaction</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Technical Skills -->
+    <div class="skills-container">
+      <h3 class="subsection-title">Technical Expertise</h3>
+
+      <div class="skills-category" *ngFor="let cat of categories">
+        <h4 class="category-name">{{ cat }}</h4>
+        <mat-chip-set class="skills-chip-set">
+          <mat-chip class="skill-chip" *ngFor="let skill of getSkillsByCategory(cat)">
+            {{ skill.name }}
+          </mat-chip>
+        </mat-chip-set>
+      </div>
+    </div>
+  </div>
+</section>

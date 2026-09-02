@@ -1,0 +1,78 @@
+<section id="hero" class="hero-section" [class.dark]="themeService.isDarkMode()">
+  <!-- Animated Background Blobs -->
+  <div class="blob blob-primary"></div>
+  <div class="blob blob-secondary"></div>
+
+  <div class="hero-container">
+    <!-- Hero Text -->
+    <div class="hero-text">
+      <div class="badge">
+        <span class="badge-dot"></span>
+        Available for New Opportunities
+      </div>
+      <h1 class="greeting">Hi, I'm <span class="highlight-text">{{ profile.name }}</span></h1>
+      <h2 class="role-title">{{ profile.title }}</h2>
+      <p class="tagline">{{ profile.tagline }}</p>
+      <p class="summary">{{ profile.bio }}</p>
+
+      <div class="cta-buttons">
+        <a mat-flat-button color="primary" href="#projects" class="hero-btn primary-btn">
+          <span>View Projects</span>
+          <mat-icon>arrow_forward</mat-icon>
+        </a>
+        <a mat-stroked-button href="#contact" class="hero-btn secondary-btn">
+          <span>Get In Touch</span>
+          <mat-icon>chat_bubble_outline</mat-icon>
+        </a>
+        <a mat-stroked-button href="/edward-prins-resume.pdf" download class="hero-btn secondary-btn">
+          <span>Download Resume</span>
+          <mat-icon>download</mat-icon>
+        </a>
+      </div>
+    </div>
+
+    <!-- Hero Visual (Procedural Geometric Art) -->
+    <div class="hero-visual">
+      <div class="art-container">
+        <div class="cube-wrapper">
+          <div class="glowing-circle"></div>
+          <div class="coding-card glass-card">
+            <div class="card-header">
+              <span class="dot red"></span>
+              <span class="dot yellow"></span>
+              <span class="dot green"></span>
+              <span class="card-title">portfolio.ts</span>
+            </div>
+            <div class="card-body">
+              <pre>
+                <code>
+                  <span class="keyword">const</span> developer = &#123;
+name: <span class="string">'{{ profile.name }}'</span>,
+skills: [
+<span class="string">'Angular'</span>,
+<span class="string">'TypeScript'</span>,
+<span class="string">'Node.js'</span>,
+<span class="string">'Cloud'</span>
+],
+passionate: <span class="boolean">true</span>,
+code: () => <span class="string">'☕ &amp; 💻'</span>
+&#125;;</code></pre>
+            </div>
+          </div>
+          <div class="decorative-badge">
+            <mat-icon class="badge-icon">auto_awesome</mat-icon>
+            <span>6+ Yrs Exp</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="scroll-indicator">
+    <a href="#about" aria-label="Scroll to About section">
+      <div class="mouse">
+        <div class="wheel"></div>
+      </div>
+    </a>
+  </div>
+</section>

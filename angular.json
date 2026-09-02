@@ -27,6 +27,11 @@
               {
                 "glob": "**/*",
                 "input": "public"
+              },
+              {
+                "glob": "edward-prins-resume.pdf",
+                "input": "docs",
+                "output": "/"
               }
             ],
             "styles": ["src/styles.scss"]
@@ -68,7 +73,11 @@
           "defaultConfiguration": "development"
         },
         "test": {
-          "builder": "@angular/build:unit-test"
+          "builder": "@angular/build:unit-test",
+          "options": {
+            "browsers": ["chromium"],
+            "headless": true
+          }
         },
         "deploy": {
           "builder": "angular-cli-ghpages:deploy"

@@ -1,0 +1,27 @@
+<section id="contact" class="section">
+  <h2 class="section-title">Get In Touch</h2>
+  <p class="section-subtitle">
+    Have a project in mind, a job opportunity, or just want to say hello? Reach out below.
+  </p>
+
+  <div class="contact-cta">
+    <div class="contact-buttons-row">
+      <a mat-flat-button color="primary" [href]="'mailto:' + profile.email" class="contact-btn">
+        <mat-icon>email</mat-icon>
+        <span>Email Me</span>
+      </a>
+      <a mat-stroked-button [href]="profile.linkedin" target="_blank" class="contact-btn">
+        <mat-icon>share</mat-icon>
+        <span>LinkedIn</span>
+      </a>
+      <a mat-stroked-button [href]="profile.github" target="_blank" class="contact-btn">
+        <mat-icon>code</mat-icon>
+        <span>GitHub</span>
+      </a>
+      <a mat-stroked-button href="/edward-prins-resume.pdf" download class="contact-btn">
+        <mat-icon>download</mat-icon>
+        <span>Download Resume</span>
+      </a>
+    </div>
+  </div>
+</section>

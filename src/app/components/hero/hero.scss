@@ -276,6 +276,8 @@
 
 .coding-card {
   width: 320px;
+  background-color: #FFFBEB;
+  color: #1F1F1F;
   padding: 16px;
   position: relative;
   z-index: 5;
@@ -290,6 +292,11 @@
     width: 280px;
     font-size: 0.8rem;
   }
+}
+
+.dark .coding-card {
+  background-color: #282A36;
+  color: #F8F8F2;
 }
 
 .card-header {
@@ -333,21 +340,21 @@ pre {
 }
 
 .keyword {
-  color: #ff7b72;
+  color: #A3144D  ;
   font-weight: bold;
 }
 .string {
-  color: #a5d6ff;
+  color: #846E15;
 }
 .boolean {
-  color: #ff9b50;
+  color: #A34D14;
 }
 
 .dark .string {
-  color: #7ee787;
+  color: #F1FA8C;
 }
 .dark .keyword {
-  color: #ff7b72;
+  color: #FFB86C;
 }
 
 .decorative-badge {

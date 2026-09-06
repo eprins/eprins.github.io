@@ -1,8 +1,4 @@
 <section id="hero" class="hero-section" [class.dark]="themeService.isDarkMode()">
-  <!-- Animated Background Blobs -->
-  <div class="blob blob-primary"></div>
-  <div class="blob blob-secondary"></div>
-
   <div class="hero-container">
     <!-- Hero Text -->
     <div class="hero-text">
@@ -35,7 +31,7 @@
     <div class="hero-visual">
       <div class="art-container">
         <div class="cube-wrapper">
-          <div class="glowing-circle"></div>
+          <!--<div class="glowing-circle"></div>-->
           <div class="coding-card glass-card">
             <div class="card-header">
               <span class="dot red"></span>
@@ -46,17 +42,19 @@
             <div class="card-body">
               <pre>
                 <code>
-                  <span class="keyword">const</span> developer = &#123;
-name: <span class="string">'{{ profile.name }}'</span>,
-skills: [
-<span class="string">'Angular'</span>,
-<span class="string">'TypeScript'</span>,
-<span class="string">'Node.js'</span>,
-<span class="string">'Cloud'</span>
-],
-passionate: <span class="boolean">true</span>,
-code: () => <span class="string">'☕ &amp; 💻'</span>
-&#125;;</code></pre>
+<span class="keyword">const</span> developer = &#123;
+  name: <span class="string">'{{ profile.name }}'</span>,
+  skills: [
+    <span class="string">'Data Visualization'</span>,
+    <span class="string">'Incident Response'</span>,
+    <span class="string">'Legacy Modernization'</span>,
+    <span class="string">'Mentorship'</span>
+  ],
+  passionate: <span class="boolean">true</span>,
+  code: () => <span class="string">'☕ &amp; 💻'</span>
+&#125;;
+                </code>
+              </pre>
             </div>
           </div>
           <div class="decorative-badge">
